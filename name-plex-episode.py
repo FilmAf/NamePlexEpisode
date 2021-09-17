@@ -119,11 +119,10 @@ def extract_episode_names(episode_list, ignore_parenthesis_content):
         if z:
             title = title[z.end():].strip()
             if ignore_parenthesis_content:
-                title = re.sub('\(.*\)', ' ', title).strip()
+                title = re.sub('\(.*\)', ' ', title)
             title = re.sub('\.mkv$', '', title)
             title = re.sub('[ _]+', ' ', title).strip()
         else:
-            title_sort = ''
             title = ''
         ep.new_title = title
 
