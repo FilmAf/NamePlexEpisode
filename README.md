@@ -1,5 +1,5 @@
 # NamePlexEpisode
-Generates SQL to update episode names based on file names
+Generates SQL to update Plex episode titles based on file names
 
 This Python script generates UPDATE statements to be applied to the Plex sqlite database titling episodes according to the respective file name.  To take effect the resulting SQL must be applied from within the sqlite client provided by Plex as described below. The location of the Plex database and the Plex executable that allows you to edit the database vary with your platform.  Our examples relate to the TrueNAS plugin.  For other implementations you will need to find the correct information.
 
