@@ -65,7 +65,7 @@ import re
 import sqlite3
 
 
-def create_connection(db_file):
+def connect_to_db(db_file):
     conn = None
     try:
         conn = sqlite3.connect(db_file)
@@ -152,7 +152,7 @@ def show_current(episode_list, force_title_update):
 
 def main():
     args = get_cmd_args()
-    conn = create_connection(args.plex_db_file)
+    conn = connect_to_db(args.plex_db_file)
     if conn:
         episode_list = find_episodes(conn, args.episode_path)
         extract_episode_names(episode_list, args.ignore_parenthesis_content)
